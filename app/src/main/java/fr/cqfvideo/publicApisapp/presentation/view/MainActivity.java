@@ -1,17 +1,13 @@
 package fr.cqfvideo.publicApisapp.presentation.view;
 
-import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
-import com.google.gson.GsonBuilder;
-
 import java.util.List;
 
-import fr.cqfvideo.publicApisapp.Constants;
 import fr.cqfvideo.publicApisapp.R;
 import fr.cqfvideo.publicApisapp.Singletons;
 import fr.cqfvideo.publicApisapp.presentation.controller.MainController;
@@ -46,12 +42,21 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        mAdapter = new ListAdapter(publicApiList);
+        mAdapter = new ListAdapter(publicApiList, new ListAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(publicApi item) {
+                controller.onItemClick(item);
+            }
+        });
         recyclerView.setAdapter(mAdapter);
     }
 
 
     public void showError() {
         Toast.makeText(getApplicationContext(), "API Error", Toast.LENGTH_SHORT).show();
+    }
+
+    public void navigateToDetails(publicApi publicApi) {
+        Toast.makeText(getApplicationContext(), "Do click", Toast.LENGTH_SHORT).show();
     }
 }

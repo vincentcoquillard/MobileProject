@@ -80,6 +80,6 @@ public class MainController {
     }
 
     public void onItemClick(publicApi publicApi){
-
+        view.navigateToDetails(publicApi);
     }
 }

@@ -12,7 +12,12 @@ import fr.cqfvideo.publicApisapp.R;
 import fr.cqfvideo.publicApisapp.presentation.model.publicApi;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
-    private List<publicApi> values;
+    private final List<publicApi> values;
+    private final OnItemClickListener listener;
+
+    public interface OnItemClickListener {
+        void onItemClick(publicApi item);
+    }
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -42,8 +47,9 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public ListAdapter(List<publicApi> myDataset) {
-        values = myDataset;
+    public ListAdapter(List<publicApi> myDataset, OnItemClickListener listener) {
+        this.values = myDataset;
+        this.listener = listener;
     }
 
     // Create new views (invoked by the layout manager)
@@ -63,11 +69,15 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
-        // - get element from your dataset at this position
-        // - replace the contents of the view with that element
         final publicApi currentApi = values.get(position);
         holder.txtHeader.setText(currentApi.getAPI());
         holder.txtFooter.setText(currentApi.getCategory());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener(){
+            @Override public void onClick(View v){
+                listener.onItemClick(currentApi);
+            }
+        });
     }
 
     // Return the size of your dataset (invoked by the layout manager)
