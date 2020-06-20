@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Public APIs</string>
     <string name="detail_text">Ecran detail</string>
+    <string name="description_txt">description_txt</string>
+    <string name="category_txt">category_txt</string>
+    <string name="link_txt">link_txt</string>
+    <string name="linktext_txt">API link:</string>
 </resources>
