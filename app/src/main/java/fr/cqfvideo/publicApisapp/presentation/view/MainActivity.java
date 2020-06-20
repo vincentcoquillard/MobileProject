@@ -13,6 +13,7 @@ import java.util.List;
 
 import fr.cqfvideo.publicApisapp.Constants;
 import fr.cqfvideo.publicApisapp.R;
+import fr.cqfvideo.publicApisapp.Singletons;
 import fr.cqfvideo.publicApisapp.presentation.controller.MainController;
 import fr.cqfvideo.publicApisapp.presentation.model.publicApi;
 
@@ -30,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
         controller = new MainController(
                 this,
-                new GsonBuilder().setLenient().create(),
-                getSharedPreferences(Constants.SHARED_PREF_NAME, Context.MODE_PRIVATE)
+                Singletons.getGson(),
+                Singletons.getsharedPreferences(getApplicationContext())
         );
         controller.onStart();
 

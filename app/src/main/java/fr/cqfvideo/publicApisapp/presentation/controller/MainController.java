@@ -1,26 +1,21 @@
 package fr.cqfvideo.publicApisapp.presentation.controller;
 
-import android.content.Context;
 import android.content.SharedPreferences;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
 import java.util.List;
 
 import fr.cqfvideo.publicApisapp.Constants;
-import fr.cqfvideo.publicApisapp.data.publicApiAPI;
+import fr.cqfvideo.publicApisapp.Singletons;
 import fr.cqfvideo.publicApisapp.presentation.model.RestpublicApiResponse;
 import fr.cqfvideo.publicApisapp.presentation.model.publicApi;
 import fr.cqfvideo.publicApisapp.presentation.view.MainActivity;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainController {
 
@@ -46,16 +41,7 @@ public class MainController {
     }
 
     private void makeApiCall(){
-
-
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(Constants.BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create(gson))
-                .build();
-
-        final publicApiAPI publicApiAPI = retrofit.create(publicApiAPI.class);
-
-        Call<RestpublicApiResponse> call = publicApiAPI.getpublicApiResponse();
+        Call<RestpublicApiResponse> call = Singletons.getPublicApi().getpublicApiResponse();
         call.enqueue(new Callback<RestpublicApiResponse>() {
             @Override
             public void onResponse(Call<RestpublicApiResponse> call, Response<RestpublicApiResponse> response) {
