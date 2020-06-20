@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "964886498557",
+    "firebase_url": "https://publicapimobileapp.firebaseio.com",
+    "project_id": "publicapimobileapp",
+    "storage_bucket": "publicapimobileapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:964886498557:android:82c1a464436e5af8644294",
+        "android_client_info": {
+          "package_name": "fr.cqfvideo.publicApisapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "964886498557-iac7qiqo6m9d3qg2923nife3qjuebpnr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNrlcCGCGMoNQS_sXkL-lS5I9YEEdAhTY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "964886498557-iac7qiqo6m9d3qg2923nife3qjuebpnr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
