@@ -1,4 +1,4 @@
-package fr.cqfvideo.publicApisapp;
+package fr.cqfvideo.publicApisapp.presentation.view;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -14,9 +13,14 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.List;
 
+import fr.cqfvideo.publicApisapp.Constants;
+import fr.cqfvideo.publicApisapp.ListAdapter;
+import fr.cqfvideo.publicApisapp.R;
+import fr.cqfvideo.publicApisapp.data.publicApiAPI;
+import fr.cqfvideo.publicApisapp.presentation.model.RestpublicApiResponse;
+import fr.cqfvideo.publicApisapp.presentation.model.publicApi;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

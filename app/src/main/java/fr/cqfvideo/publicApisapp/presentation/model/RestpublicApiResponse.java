@@ -1,4 +1,4 @@
-package fr.cqfvideo.publicApisapp;
+package fr.cqfvideo.publicApisapp.presentation.model;
 
 import java.util.List;
 

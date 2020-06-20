@@ -1,6 +1,6 @@
 package fr.cqfvideo.publicApisapp;
 
 public class Constants {
-    static String PUBLICAPI_LIST = "jsonpublicApiList";
-    static String SHARED_PREF_NAME = "public_api";
+    public static String PUBLICAPI_LIST = "jsonpublicApiList";
+    public static String SHARED_PREF_NAME = "public_api";
 }

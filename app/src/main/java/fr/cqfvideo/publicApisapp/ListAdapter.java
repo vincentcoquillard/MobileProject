@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import fr.cqfvideo.publicApisapp.presentation.model.publicApi;
+
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     private List<publicApi> values;
 
