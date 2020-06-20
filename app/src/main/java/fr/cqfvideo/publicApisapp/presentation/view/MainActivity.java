@@ -1,5 +1,6 @@
 package fr.cqfvideo.publicApisapp.presentation.view;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -57,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void navigateToDetails(publicApi publicApi) {
-        Toast.makeText(getApplicationContext(), "Do click", Toast.LENGTH_SHORT).show();
+        Intent myIntent = new Intent(MainActivity.this, DetailActivity.class);
+        myIntent.putExtra("publicApikey", Singletons.getGson().toJson(publicApi));
+        MainActivity.this.startActivity(myIntent);
     }
 }

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Public APIs</string>
+    <string name="detail_text">Ecran detail</string>
 </resources>
