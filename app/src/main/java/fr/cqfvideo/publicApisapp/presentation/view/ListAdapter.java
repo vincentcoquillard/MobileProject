@@ -1,4 +1,4 @@
-package fr.cqfvideo.publicApisapp;
+package fr.cqfvideo.publicApisapp.presentation.view;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import fr.cqfvideo.publicApisapp.R;
 import fr.cqfvideo.publicApisapp.presentation.model.publicApi;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
