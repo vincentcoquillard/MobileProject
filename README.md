@@ -2,6 +2,9 @@
 
 My app is an App referencing Public APIs.
 
+# How to use it
+First, you choose a public API on the list. Then there is a small description of the API, its category and also the direct link to the documentation of the API.
+
 # Screenshots
 ![GitHub Logo](/images/screen1.PNG)
 ![GitHub Logo](/images/screen2.PNG)
